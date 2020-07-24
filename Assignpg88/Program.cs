@@ -33,7 +33,10 @@ namespace Assignpg88
             {
                 Console.WriteLine("False");
                     }
-
+            Console.WriteLine("As a last math exercise, lets divide a number by 7 and see if there's a remainder.");
+            int num5 = Convert.ToInt32(Console.ReadLine());
+            int remain = num5 % 7;
+            Console.WriteLine("The remainder of " + num5 + " by 7, is " + remain);
             Console.Read();
         }
     }
