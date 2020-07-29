@@ -1,0 +1,7 @@
+C:\Krist\Basic-CSharp-Projects\Assignpg137to142\obj\Debug\Assignpg137to142.csprojAssemblyReference.cache
+C:\Krist\Basic-CSharp-Projects\Assignpg137to142\obj\Debug\Assignpg137to142.csproj.CoreCompileInputs.cache
+C:\Krist\Basic-CSharp-Projects\Assignpg137to142\bin\Debug\Assignpg137to142.exe.config
+C:\Krist\Basic-CSharp-Projects\Assignpg137to142\bin\Debug\Assignpg137to142.exe
+C:\Krist\Basic-CSharp-Projects\Assignpg137to142\bin\Debug\Assignpg137to142.pdb
+C:\Krist\Basic-CSharp-Projects\Assignpg137to142\obj\Debug\Assignpg137to142.exe
+C:\Krist\Basic-CSharp-Projects\Assignpg137to142\obj\Debug\Assignpg137to142.pdb
