@@ -85,7 +85,6 @@ namespace Assignpg137to142
                         {
                             Console.WriteLine(userDay + " is a great day to get some studying in!");
                             match = true;
-                            Console.Read();
                         }
                     }
             }
@@ -93,9 +92,9 @@ namespace Assignpg137to142
             //part 9: Create a List of strings that has at least two identical strings in the List. Ask the user to 
             //select text to search for in the List. Create a loop that iterates through the loop and then displays 
             //the indices of the array that contain matching text on the screen.
-
+            //part 10: Add code to that above loop that tells a user if they put in text that isn’t in the List.
             List<string> lyric = new List<string>();
-            lyric.Add("Here");
+            lyric.Add("here");
             lyric.Add("we");
             lyric.Add("are");
             lyric.Add("born");
@@ -109,26 +108,46 @@ namespace Assignpg137to142
             lyric.Add("of");
             lyric.Add("the");
             lyric.Add("universe");
+            bool isMatch = false;
+
+            Console.WriteLine("Pick one of the following words from the lyrics: Here we are born to be kings, we are the princes of the universe.");
+            string que = Console.ReadLine();
+            que = que.ToLower();
 
                 for (int m = 0; m < lyric.Count; m++)
                     {
-                    for (int q = 0; q < lyric.Count; q++)
-                        {
-                        if (m == q)
-                        { }
-                        else
-                        {
-                            if (lyric[m] == lyric[q])
-                            {
-                                Console.WriteLine("The index of lyrics at " + m + " and " + q + "are the same word- " + lyric[q]);
-                            }
-                            else 
-                                {
+                if (lyric[m] == que)
 
-                            }
-                        }
-                        }
+                {
+                    Console.WriteLine("The word " + que + " appears as the " + m + " word in the stanza.");
+                    isMatch = true;
                 }
+                else if (isMatch == false)
+                {
+                    Console.WriteLine("That word is not in this part of the song, please try another word.");
+                    que = Console.ReadLine();
+                    que = que.ToLower();
+                }
+                    }
+            // part 11, using same string as above - Create a List of strings that has at least two identical 
+            // strings in the List. Create a foreach loop that evaluates each item in the list, and displays a 
+            // message showing the string and whether or not it has already appeared in the list.     
+            bool finMatch = false;
+
+            foreach (string word in lyric)
+            {
+                if (finMatch == false)
+                {
+                    finMatch = true;
+                    Console.WriteLine(word);
+                }
+                else
+                {
+                    Console.WriteLine("- " + word);
+                }
+                                    
+
+            }
 
             Console.ReadLine();
 
