@@ -131,19 +131,25 @@ namespace Assignpg137to142
                     }
             // part 11, using same string as above - Create a List of strings that has at least two identical 
             // strings in the List. Create a foreach loop that evaluates each item in the list, and displays a 
-            // message showing the string and whether or not it has already appeared in the list.     
-            bool finMatch = false;
-
+            // message showing the string and whether or not it has already appeared in the list.
+            List<string> dupLyric = new List<string>();
             foreach (string word in lyric)
             {
-                if (finMatch == false)
+
+                if (dupLyric.Contains(word)==true)
                 {
-                    finMatch = true;
-                    Console.WriteLine(word);
+                   
+                    Console.WriteLine(word+" is duplicated in the lyrics.");
+                }
+                else if(dupLyric.Contains(word)==false)
+                {
+                   
+                   
+                    dupLyric.Add(word);
                 }
                 else
                 {
-                    Console.WriteLine("- " + word);
+                    Console.WriteLine("This did not test");
                 }
                                     
 

@@ -53,10 +53,7 @@ namespace Assignment137
                 {
                     Console.WriteLine("The name " + name + " is one of the ones on my list!");
                 }
-                else
-                {
-                    Console.WriteLine(name + "is not a name I listed, try again!");
-                }
+                if ()
             }
 
             Console.Read();
