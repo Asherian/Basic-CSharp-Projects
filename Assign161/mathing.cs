@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,11 +15,18 @@ namespace Assign161
         public decimal num2 { get; set; }
         public decimal numResult { get; set; }
 
-        //Constructor - values assigned an object upon creation.
-        public mathing()
+
+        public decimal times(decimal x, decimal y)
         {
-            num1 = 0;
-            num2 = 0;
+            return x * y;
+        }
+        public decimal plusplus(decimal x, decimal y)
+        {
+            return x + y;
+        }
+        public decimal squares(decimal x)
+        {
+            return x * x;
         }
     }
 }
