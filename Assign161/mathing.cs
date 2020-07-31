@@ -11,20 +11,19 @@ namespace Assign161
     class mathing
     {
         //properties of class:
-        public decimal num1 { get; set; }
-        public decimal num2 { get; set; }
-        public decimal numResult { get; set; }
+        public int num1 { get; set; }
+        public int numResult { get; set; }
 
 
-        public decimal times(decimal x, decimal y)
+        public int times(int x)
         {
-            return x * y;
+            return x * 10;
         }
-        public decimal plusplus(decimal x, decimal y)
+        public int plusplus(int x)
         {
-            return x + y;
+            return x + 5;
         }
-        public decimal squares(decimal x)
+        public int squares(int x)
         {
             return x * x;
         }
