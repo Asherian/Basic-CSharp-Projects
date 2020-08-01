@@ -13,20 +13,25 @@ namespace Assign165
             Options opt = new Options();
 
             Console.WriteLine("Please pick a number:");
-            opt.num1 = Convert.ToInt32(Console.ReadLine());
+            int num1 = Convert.ToInt32(Console.ReadLine());
+
 
             Console.WriteLine("Please pick a 2nd number if you'd like, else it will default to another number.");
-            int numUser = Convert.ToInt32(Console.ReadLine());
-            if (input.Length==0) 
+            string numUser = Console.ReadLine();
+
+            if (numUser == "")
             {
-                opt.result = opt.Mathy(opt.num1, opt.num2 = 7);
-                Console.WriteLine("The result with the current default 7 is: " + opt.result);
+                int result = opt.Mathy(num1);
+                Console.WriteLine(num1 + " + 5 = " + result);
             }
-            else
+
+            else 
             {
-                opt.result = opt.Mathy(opt.num1, opt.num2 = numUser);
-                Console.WriteLine("The result with your number " + numUser + " is: " + opt.result);
+                int num2 = Convert.ToInt32(numUser);
+                int result = opt.Mathy(num1, num2);
+                Console.WriteLine(num1 + " + " + num2 + " = " + result);
             }
+               
             Console.Read();
         }
     }
