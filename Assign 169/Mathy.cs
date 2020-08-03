@@ -7,22 +7,17 @@ using System.Xml.XmlConfiguration;
 
 namespace Assign_169
 {
-    class Mathy
+    static class Mathy
     {
-        public void divid(int x)
+        public static void DivId(int x)
         {
             int result = x / 2;
+            Console.WriteLine("The number divided by two is : " + result);
         }
-        public void divid(out decimal x)
+        public static void DivId(out decimal x, decimal y)
         {
-            decimal temp = x / 2 ;
+            decimal temp = y / 2 ;
             x = temp;
         }
-        public static class CreatedDate
-        {
-            public static string purpose = "To have a static class and fields in it.";
-            public static DateTime Today = new DateTime(2020, 08, 01);
-        }
-
     }
 }
