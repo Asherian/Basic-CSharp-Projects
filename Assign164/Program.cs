@@ -24,11 +24,11 @@ namespace Assign164
             decimal numResult2 = mathing.Mathy(num2);
             Console.WriteLine("We multiplied " + num2 + " by 2 to get: " + numResult2);
 
-            Console.WriteLine("Now, for this one I want you to pick any word:");
+            Console.WriteLine("Now, I want a new number please:");
             string word = Console.ReadLine();
 
             int wordCount = mathing.Mathy(word);
-            Console.WriteLine("That word is " + wordCount + " characters long.");
+            Console.WriteLine("Did I hear, that right, you said " + wordCount + " is the number you chose?");
 
             Console.Read();
         }

@@ -21,7 +21,7 @@ namespace Assign164
         {
             return x + 5;
         }
-        public decimal Mathy(decimal x)
+        public int Mathy(decimal x)
         {
             int numResult2 = Convert.ToInt32(x * 2);
             return numResult2;
@@ -30,8 +30,8 @@ namespace Assign164
 
         public int Mathy(string x)
         {
-            int wordCount = x.Count();
-            return wordCount;
+            int num2 = Convert.ToInt32(x);
+            return num2;
         }
     }
 }
