@@ -10,6 +10,13 @@ namespace Assign179
     {
         static void Main(string[] args)
         {
+            Employee n = new Employee();
+            n.FirstName = "Sample";
+            n.LastName = "Student";
+
+            n.SayName();
+
+            Console.Read();
         }
     }
 }
