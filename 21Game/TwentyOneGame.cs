@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _21Game
 {
-    public class TwentyOneGame : Game
+    public class TwentyOneGame : Game, IWalkAway
     {
         public override void Play()
             //override is how you pull in the abstract method from the root class.
@@ -17,6 +17,10 @@ namespace _21Game
         {
             Console.WriteLine("21 Players");
             base.ListPlayers();
+        }
+        public void WalkAway(Player player)
+        {
+            throw new NotImplementedException();
         }
     }
 
