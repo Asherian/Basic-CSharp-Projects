@@ -9,11 +9,16 @@ namespace Assign_169
 {
     class Mathy
     {
-        public void div(int x)
+        public void divid(int x)
         {
             int result = x / 2;
         }
-        public static class div
+        public void divid(out decimal x)
+        {
+            decimal temp = x / 2 ;
+            x = temp;
+        }
+        public static class CreatedDate
         {
             public static string purpose = "To have a static class and fields in it.";
             public static DateTime Today = new DateTime(2020, 08, 01);

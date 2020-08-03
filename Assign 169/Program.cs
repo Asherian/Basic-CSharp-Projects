@@ -15,7 +15,7 @@ namespace Assign_169
             Console.WriteLine("Please choose a number to divide:");
             int num1 = Convert.ToInt32(Console.ReadLine());
 
-            m.div(num1);
+            m.divid(num1);
         }
     }
 }
