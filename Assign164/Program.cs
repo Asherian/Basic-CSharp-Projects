@@ -13,21 +13,21 @@ namespace Assign164
             MathInt mathing = new MathInt();
 
             Console.WriteLine("Today we're going to play with numbers, please pick one.");
-            mathing.num1 = Convert.ToInt32(Console.ReadLine());
+            int num1 = Convert.ToInt32(Console.ReadLine());
 
-            mathing.numResult = mathing.Mathy(mathing.num1);
-            Console.WriteLine("The first thing we did was add 5 for: " + mathing.numResult);
+            int numResult = mathing.Mathy(num1);
+            Console.WriteLine("The first thing we did was add 5 for: " + numResult);
 
             Console.WriteLine("Please pick a new number: ");
-            mathing.num2 = Convert.ToDecimal(Console.ReadLine());
+            decimal num2 = Convert.ToDecimal(Console.ReadLine());
 
-            decimal numResult2 = mathing.Mathy(mathing.num2);
-            Console.WriteLine("We multiplied " + mathing.num2 + " by 2 to get: " + numResult2);
+            decimal numResult2 = mathing.Mathy(num2);
+            Console.WriteLine("We multiplied " + num2 + " by 2 to get: " + numResult2);
 
             Console.WriteLine("Now, for this one I want you to pick any word:");
-            mathing.word = Console.ReadLine();
+            string word = Console.ReadLine();
 
-            int wordCount = mathing.Mathy(mathing.word);
+            int wordCount = mathing.Mathy(word);
             Console.WriteLine("That word is " + wordCount + " characters long.");
 
             Console.Read();
