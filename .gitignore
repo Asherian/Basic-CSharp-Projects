@@ -338,8 +338,3 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
-Assign117/App.config
-Assign117/Assign117.csproj
-Assign117/Assign117.sln
-Assign117/Program.cs
-Assign117/Properties/AssemblyInfo.cs

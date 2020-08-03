@@ -1,15 +1,24 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-
-namespace Assignpg54
+namespace Assign174
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Acme Accounting Systems");
-            Console.WriteLine("Remember, we're \"accounting\" on you!");
+            Employee n = new Employee();
+            n.FirstName = "Sample";
+            n.LastName = "Student";
+
+            n.SayName();
+
             Console.Read();
+
         }
     }
 }
