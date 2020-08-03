@@ -4,13 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assign179
+namespace Assign182
 {
-    public class Employee : Person
+    public class Employee : Person, IQuittable
     {
         public override void SayName()
         {
             base.SayName();
+        }
+
+        public void Quit(Employee employee)
+        {
+
         }
     }
 }
