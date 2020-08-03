@@ -10,9 +10,15 @@ namespace _21Game
     {
         static void Main(string[] args)
         {
+            TwentyOneGame game = new TwentyOneGame();
+            game.Players = new List<string>() { "Jesse", "Bill", "Joe" };
+            game.ListPlayers();
+            game.Play();
             Deck deck = new Deck();
             deck.Shuffle();
-         
+
+            //Card card = new Card() { Face = "King", Suit = "Spades" };
+
 
             foreach (Card card in deck.Cards)
             {
@@ -21,6 +27,7 @@ namespace _21Game
             Console.WriteLine(deck.Cards.Count);
             Console.WriteLine("Times Shuffled: {0}", timesShuffled);
 
+            Console.Read();
         }
 
         
