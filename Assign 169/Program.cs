@@ -24,7 +24,7 @@ namespace Assign_169
             decimal x = 0;
             Mathy.DivId(out x, y);
             Console.WriteLine("After method, the value is now : {0}", x);
-
+            
             Console.Read();
         }
     }
