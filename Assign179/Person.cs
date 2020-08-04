@@ -13,7 +13,7 @@ namespace Assign179
 
         public virtual void SayName()
         {
-            Console.WriteLine("Name: " + FirstName + " " + LastName);
+            
         }
     }
 }

@@ -10,7 +10,7 @@ namespace Assign179
     {
         public override void SayName()
         {
-            base.SayName();
+            Console.WriteLine("Name: " + FirstName + " " + LastName);
         }
     }
 }
