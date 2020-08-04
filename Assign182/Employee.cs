@@ -4,18 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assign182
+namespace Assignpg182
 {
-    public class Employee : Person, IQuittable
+    class Employee : Person, IQuittable
     {
-        public override void SayName()
-        {
-            base.SayName();
-        }
+        public int ID { get; set; }
 
-        public void Quit(Employee employee)
+        public void Quit()
         {
-
+            Console.WriteLine("I quit, I'm done here.");
         }
     }
 }

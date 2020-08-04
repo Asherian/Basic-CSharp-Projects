@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assign182
+namespace Assignpg182
 {
     class Program
     {
@@ -15,6 +15,8 @@ namespace Assign182
             n.LastName = "Student";
 
             n.SayName();
+
+            n.Quit();
 
             Console.Read();
         }

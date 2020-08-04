@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assign182
+namespace Assignpg182
 {
-    public abstract class Person
+    class Person
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
-        public virtual void SayName()
+        public void SayName()
         {
             Console.WriteLine("Name: " + FirstName + " " + LastName);
         }
