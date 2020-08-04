@@ -9,7 +9,7 @@ namespace _21Game
     public abstract class Game
     //abstract class - can only be inhereted from, can never be an object itself. Also known as a Base Class
     {
-        public List<string> Players { get; set; }
+        public List<Player> Players { get; set; }
         public string Name { get; set; }
         public string Dealer { get; set; }
 
@@ -20,7 +20,7 @@ namespace _21Game
         public virtual void ListPlayers()
             //virtual is only inside of an abstract class, can be inherted by a class to be overriden.
         {
-            foreach (string player in Players)
+            foreach (Player player in Players)
             {
                 Console.WriteLine(player);
             }
