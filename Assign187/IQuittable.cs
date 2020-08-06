@@ -8,5 +8,6 @@ namespace Assign187
 {
     interface IQuittable
     {
+        void Quit();
     }
 }
