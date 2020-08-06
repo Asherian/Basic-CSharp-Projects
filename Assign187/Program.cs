@@ -30,6 +30,25 @@ namespace Assign187
             m.SayName();
             o.SayName();
 
+            if (n.ID == m.ID)
+            {
+                Console.WriteLine(n.FirstName + " has the same Employee ID as " + m.FirstName);
+            }
+            else
+            {
+                Console.WriteLine(n.FirstName + " has a different employee ID then " + m.FirstName);
+            }
+
+            if (n.ID == o.ID)
+            {
+                Console.WriteLine(n.FirstName + " has the same Employee ID as " + o.FirstName);
+            }
+            else
+            {
+                Console.WriteLine(n.FirstName + " has a different employee ID then " + o.FirstName);
+            }
+
+
 
             Console.Read();
         }
