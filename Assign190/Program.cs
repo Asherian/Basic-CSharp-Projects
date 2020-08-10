@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 
 namespace Assign190
 {
@@ -35,7 +36,15 @@ namespace Assign190
             m.SayName();
             o.SayName();
 
-            foreach (int i = 0; )
+            foreach (int i = 0; i >= EmpID.Count; i++)
+            {
+                Console.WriteLine(EmpID[i]);
+            }
+
+            foreach (int j = 0; j >= EmpList.Count; j++)
+            {
+                Console.WriteLine(EmpList[j]);
+            }
             //if (n.ID == m.ID)
             //{
             //    Console.WriteLine(n.FirstName + " has the same Employee ID as " + m.FirstName);
