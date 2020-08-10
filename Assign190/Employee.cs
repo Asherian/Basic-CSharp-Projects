@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Assign190
 {
-    class Employee : Person, IQuittable
+    class Employee<T> : Person, IQuittable
     {
+        public List<T> things { get; set; }
         public int ID { get; set; }
 
         public void Quit()

@@ -10,8 +10,7 @@ namespace Assign190
     {
         static void Main(string[] args)
         {
-
-            List<int> EmpList = new List<int>();
+            EmpList<string> EmpList
             Employee n = new Employee();
             n.FirstName = "Sample";
             n.LastName = "Student";
