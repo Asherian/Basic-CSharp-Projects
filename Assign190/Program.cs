@@ -34,9 +34,9 @@ namespace Assign190
             m.SayName();
             o.SayName();
 
-            foreach (string item in n.things)
+            foreach (string Thing in n.things)
             {
-                Console.WriteLine(item);
+                Console.WriteLine(Thing);
             }
 
             //if (n.ID == m.ID)
