@@ -9,42 +9,36 @@ namespace Assign190
         static void Main(string[] args)
         {
 
-            List<string> EmpList = new List<string>();
-            List<int> EmpID = new List<int>();
+           
             Employee<string> n = new Employee<string>();
             n.FirstName = "Sample";
             n.LastName = "Student";
             n.ID = 12;
-            EmpList.Add("Sample Student");
-            EmpID.Add(12);
+            n.things = new List<string>();
+            n.things.Add("Thimble");
+            n.things.Add("String");
 
             Employee<string> m = new Employee<string>();
             m.FirstName = "Jesse";
             m.LastName = "James";
             m.ID = 23;
-            EmpList.Add("Jesse James");
-            EmpID.Add(23);
+            m.things = new List<int>();
 
             Employee<string> o = new Employee<string>();
             o.FirstName = "Serious";
             o.LastName = "Business";
             o.ID = 12;
-            EmpList.Add("Serious Business");
-            EmpID.Add(12);
+
 
             n.SayName();
             m.SayName();
             o.SayName();
 
-            foreach (int i = 0; i >= EmpID.Count; i++)
+            foreach (string item in n.things)
             {
-                Console.WriteLine(EmpID[i]);
+                Console.WriteLine(item);
             }
 
-            foreach (int j = 0; j >= EmpList.Count; j++)
-            {
-                Console.WriteLine(EmpList[j]);
-            }
             //if (n.ID == m.ID)
             //{
             //    Console.WriteLine(n.FirstName + " has the same Employee ID as " + m.FirstName);

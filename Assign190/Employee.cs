@@ -8,7 +8,7 @@ namespace Assign190
 {
     class Employee<T> : Person, IQuittable
     {
-        public List<T> EmpList { get; set; }
+        public List<T> things { get; set; }
         public int ID { get; set; }
 
         public void Quit()
