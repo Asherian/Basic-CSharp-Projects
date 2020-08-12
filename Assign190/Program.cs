@@ -18,11 +18,15 @@ namespace Assign190
             n.things.Add("Thimble");
             n.things.Add("String");
 
-            Employee<string> m = new Employee<string>();
+            Employee<int> m = new Employee<int>();
             m.FirstName = "Jesse";
             m.LastName = "James";
             m.ID = 23;
             m.things = new List<int>();
+            m.things.Add(12);
+            m.things.Add(23);
+            m.things.Add(5);
+
 
             Employee<string> o = new Employee<string>();
             o.FirstName = "Serious";
@@ -38,7 +42,11 @@ namespace Assign190
             {
                 Console.WriteLine(Thing);
             }
-
+            
+            foreach (int num in m.things)
+            {
+                Console.WriteLine(num);
+            }
             //if (n.ID == m.ID)
             //{
             //    Console.WriteLine(n.FirstName + " has the same Employee ID as " + m.FirstName);
