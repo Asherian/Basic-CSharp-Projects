@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Security.Cryptography.X509Certificates;
 
 namespace _21Game
 {
@@ -7,8 +11,14 @@ namespace _21Game
         static void Main(string[] args)
         {
             Deck deck = new Deck();
-            deck.Shuffle(3);
 
+            //List<Card> newList = deck.Cards.Where(x =>x.Face == Face.King).ToList();
+
+            List<int> numberList = new List<int>() { 1, 2, 3, 35, 535, 342, 23 };
+
+            int sum = numberList.Where(x => x > 20).Sum() ;
+            Console.WriteLine(sum);
+            //deck.Shuffle(3);
             ////One object morphing into a higher order object aka something it inherts from. 
             //List<Game> games = new List<Game>();
             //TwentyOneGame game = new TwentyOneGame();
