@@ -29,16 +29,16 @@ namespace Assign203
 
             Console.WriteLine("All Employees named just Joe");
             List<Employee> empJoe = new List<Employee>();
-
+            List<Employee> JoeList = new List<Employee>();
             foreach (Employee person in EmpList)
             {
                 if (person.FirstName == "Joe")
                 {
                     Console.WriteLine(person.FirstName+ " "+person.LastName + " ID: "+person.ID);
-                   
+                    JoeList.Add(person);
                 }
             }
-
+            
             empJoe = EmpList.FindAll(x => x.FirstName == "Joe").ToList();
 
             Console.WriteLine("Employees who have IDs greater than 5: ");
@@ -48,7 +48,7 @@ namespace Assign203
 
             foreach (Employee person in IDg5)
             {
-                Console.WriteLine(person.FirstName + " has an ID number of :" + person.ID);
+                Console.WriteLine(person.FirstName + " has an ID number of: " + person.ID);
             }
             Console.Read();
         }
