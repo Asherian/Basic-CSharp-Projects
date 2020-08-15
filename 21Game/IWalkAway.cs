@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _21Game
 {
-    interface IWalkAway
+    public interface IWalkAway
     {
         //must be a way for the user to stand up and walk away with current balance.
         void WalkAway(Player player);

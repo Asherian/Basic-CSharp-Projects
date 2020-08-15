@@ -10,51 +10,30 @@ namespace _21Game
     {
         static void Main(string[] args)
         {
-            Deck deck = new Deck();
+            Console.WriteLine("Welcome, to the Grand Hotel and Casino. Lets start by telling me your name.");
+            string playerName = Console.ReadLine();
+            Console.WriteLine("And how much money did you bring today?");
+            int bank = Convert.ToInt32(Console.ReadLine());
 
-            //List<Card> newList = deck.Cards.Where(x =>x.Face == Face.King).ToList();
-
-            List<int> numberList = new List<int>() { 1, 2, 3, 35, 535, 342, 23 };
-
-            int sum = numberList.Where(x => x > 20).Sum() ;
-            Console.WriteLine(sum);
-            //deck.Shuffle(3);
-            ////One object morphing into a higher order object aka something it inherts from. 
-            //List<Game> games = new List<Game>();
-            //TwentyOneGame game = new TwentyOneGame();
-            //games.Add(game);
-            //Game game = new TwentyOneGame();
-            //game.Players = new List<Player>();
-            //Player player = new Player();
-            //player.Name = "Jesse";
-            //game += player;
-            //    // same as typing game = game + player;
-            //game -= player;
-
-            //Card card = new Card() { Face = "King", Suit = "Spades" };
-            //Card card = new Card();
-            //card.Suit = Suit.Clubs;
-            //int underlyingvalue = (int)Suit.Diamonds;
-
-
-                foreach (Card card in deck.Cards)
+            Console.WriteLine("Hello, {0}. Would you like to join a game of 21 right now?", playerName);
+            string answer = Console.ReadLine().ToLower();
+            if (answer == "yes" || answer == "yeah" || answer == "y" || answer == "ya")
+            {
+                Player player = new Player( playerName, bank );
+                Game game = new TwentyOneGame();
+                game += player;
+                player.isActivelyPlaying = true;
+                while (player.isActivelyPlaying && player.Balance > 0)
                 {
-                    Console.WriteLine(card.Face + " of " + card.Suit);
+                    game.Play();
                 }
-                Console.WriteLine(deck.Cards.Count);
-
+                game -= player;
+                Console.WriteLine("Thank you for playing!");
+            }
+            Console.WriteLine("Feel free to look around the casino. Bye for now.");
             Console.Read();
         }
 
-
-        //public static Deck Shuffle(Deck deck, int times)
-        //{
-        //    for (int i=0; i < times; i++)
-        //    {
-        //        deck = Shuffle(deck);
-        //    }
-        //    return deck;
-        //}
     }
 
 

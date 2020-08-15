@@ -9,9 +9,12 @@ namespace _21Game
     public abstract class Game
     //abstract class - can only be inhereted from, can never be an object itself. Also known as a Base Class
     {
-        public List<Player> Players { get; set; }
+        private List<Player> _players = new List<Player>();
+        private Dictionary<Player, int> _bets = new Dictionary<Player, int>();
+
+        public List<Player> Players { get { return _players; } set { _players = value; } }
         public string Name { get; set; }
-        public string Dealer { get; set; }
+        public Dictionary<Player, int> Bets { get { return _bets; } set { _bets = value; } }
 
         public abstract void Play();
         //can only exist inside an abstract class, and allows no insitiation.
