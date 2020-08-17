@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3F96406F-A15E-4BB0-8533-F91FB9B0D015}</ProjectGuid>
+    <ProjectGuid>{54944C15-BA53-402B-8834-7BD5971B580E}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_21Game</RootNamespace>
-    <AssemblyName>21Game</AssemblyName>
+    <RootNamespace>Assign230</RootNamespace>
+    <AssemblyName>Assign230</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,9 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Casino">
-      <HintPath>..\Casino\bin\Debug\Casino.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />

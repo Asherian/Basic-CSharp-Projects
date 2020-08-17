@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _21Game
+namespace Casino
 {
     public abstract class Game
     //abstract class - can only be inhereted from, can never be an object itself. Also known as a Base Class

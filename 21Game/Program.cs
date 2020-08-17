@@ -1,18 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Security.Cryptography.X509Certificates;
+using Casino;
+using Casino.TwentyOne;
 
-namespace _21Game
+namespace TwentyOne
 {
     class Program
     {
         static void Main(string[] args)
         {
+            const string casinoName = "Grand Hotel and Casino";
 
 
-            Console.WriteLine("Welcome, to the Grand Hotel and Casino. Lets start by telling me your name.");
+            Console.WriteLine("Welcome, to the {0}. Lets start by telling me your name.", casinoName);
             string playerName = Console.ReadLine();
             Console.WriteLine("And how much money did you bring today?");
             int bank = Convert.ToInt32(Console.ReadLine());
@@ -22,6 +26,12 @@ namespace _21Game
             if (answer == "yes" || answer == "yeah" || answer == "y" || answer == "ya")
             {
                 Player player = new Player( playerName, bank );
+                player.Id = Guid.NewGuid();
+                using (StreamWriter file = new StreamWriter(@"C:\TechAcademy\Basic-CSharp-Projects\21Game\log\log.txt", true))
+                {
+                    file.WriteLine(player.Id);
+                }
+
                 Game game = new TwentyOneGame();
                 game += player;
                 player.isActivelyPlaying = true;
