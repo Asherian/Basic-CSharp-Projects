@@ -10,6 +10,8 @@ namespace _21Game
     {
         static void Main(string[] args)
         {
+
+
             Console.WriteLine("Welcome, to the Grand Hotel and Casino. Lets start by telling me your name.");
             string playerName = Console.ReadLine();
             Console.WriteLine("And how much money did you bring today?");

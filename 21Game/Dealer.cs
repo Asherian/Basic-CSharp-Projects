@@ -20,6 +20,7 @@ namespace _21Game
             Console.WriteLine(card);
             using (StreamWriter file = new StreamWriter(@"C:\TechAcademy\Basic-CSharp-Projects\21Game\log\log.txt", true))
             {
+                file.WriteLine(DateTime.Now);
                 file.WriteLine(card);
             }
 
