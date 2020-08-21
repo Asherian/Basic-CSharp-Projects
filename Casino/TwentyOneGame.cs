@@ -27,7 +27,6 @@ namespace Casino.TwentyOne
             Dealer.Stay = false;
             Dealer.Deck = new Deck();
             Dealer.Deck.Shuffle();
-            Console.WriteLine("Place your bet!");
 
             foreach (Player player in Players)
             {
@@ -41,7 +40,7 @@ namespace Casino.TwentyOne
                 }                    
                 if (bet < 0 )
                 {
-                    throw new FraudException();
+                    throw new FraudException("Security! Kick this person out.");
                 }
                 bool successfullyBet = player.Bet(bet);
                 if (!successfullyBet)
