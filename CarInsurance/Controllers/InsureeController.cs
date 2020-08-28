@@ -19,6 +19,11 @@ namespace CarInsurance.Controllers
         {
             return View(db.Insurees.ToList());
         }
+        // GET: Insuree/Admin
+        public ActionResult Admin()
+        {
+            return View(db.Insurees.ToList());
+        }
 
         // GET: Insuree/Details/5
         public ActionResult Details(int? id)
@@ -35,6 +40,7 @@ namespace CarInsurance.Controllers
             return View(insuree);
         }
 
+
         // GET: Insuree/Create
         public ActionResult Create()
         {
@@ -46,10 +52,68 @@ namespace CarInsurance.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,FirstName,LastName,EmailAddress,DateOfBirth,CarYear,CarMake,CarModel,DUI,SpeedingTickets,CoverageType")] Insuree insuree)
+        public ActionResult Create([Bind(Include = "Id,FirstName,LastName,EmailAddress,DateOfBirth,CarYear,CarMake,CarModel,DUI,SpeedingTickets,CoverageType,Quote")] Insuree insuree)
         {
             if (ModelState.IsValid)
             {
+                decimal QuoteBase = 50M;
+                int Age = CalculateAge(insuree.DateOfBirth);
+
+                int CalculateAge(DateTime DoB)
+                {
+                    int age = 0;
+                    age = DateTime.Now.Year - DoB.Year;
+                    if (DateTime.Now.DayOfYear < DoB.DayOfYear)
+                    {
+                        age = age - 1;
+                    }
+                    return age;
+                }
+                if (Age >= 25)
+                {
+
+                    QuoteBase = QuoteBase + 25.00M;
+                }
+                else if (Age > 18 || Age < 25)
+                {
+                    QuoteBase = QuoteBase + 50.00M;
+                }
+                else if (Age < 18)
+                {
+                    QuoteBase = QuoteBase + 100M;
+                }
+                if (insuree.CarYear > 2015)
+                {
+                    QuoteBase = QuoteBase + 25M;
+
+                }
+                else if (insuree.CarYear < 2000)
+                {
+                    QuoteBase = QuoteBase + 25M;
+
+                }
+                if (insuree.SpeedingTickets > 0)
+                {
+                    QuoteBase = QuoteBase + (insuree.SpeedingTickets * 10);
+                }
+                if (insuree.CarModel == "Porsche")
+                {
+                    QuoteBase = QuoteBase + 25M;
+                    if (insuree.CarMake == "911 Carrera")
+                    {
+                        QuoteBase = QuoteBase + 25M;
+                    }
+                }
+                if (insuree.DUI)
+                {
+                    QuoteBase = QuoteBase * 1.25M;
+                }
+                if (insuree.CoverageType)
+                {
+                    QuoteBase = QuoteBase * 1.5M;
+                }
+                insuree.Quote = QuoteBase;
+
                 db.Insurees.Add(insuree);
                 db.SaveChanges();
                 return RedirectToAction("Index");
